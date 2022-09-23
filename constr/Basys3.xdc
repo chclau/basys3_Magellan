@@ -1,9 +1,9 @@
 
 # Clock signal
 #Bank = 34, Pin name = ,					Sch name = CLK100MHZ
-set_property PACKAGE_PIN W5 [get_ports CLK]
-set_property IOSTANDARD LVCMOS33 [get_ports CLK]
-create_clock -period 10.000 -name sys_clk_pin -waveform {0.000 5.000} -add [get_ports CLK]
+#set_property PACKAGE_PIN W5 [get_ports sys_clock]
+#set_property IOSTANDARD LVCMOS33 [get_ports sys_clock]
+#create_clock -period 10.000 -name sys_clk_pin -waveform {0.000 5.000} -add [get_ports sys_clock]
 
 # Switches
 set_property PACKAGE_PIN V17 [get_ports {SW[0]}]
@@ -81,7 +81,6 @@ set_property IOSTANDARD LVCMOS33 [get_ports {LED[14]}]
 set_property PACKAGE_PIN L1 [get_ports {LED[15]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {LED[15]}]
 
-
 #7 segment display
 #Bank = 34, Pin name = ,						Sch name = CA
 set_property PACKAGE_PIN W7 [get_ports {SSEG_CA[0]}]
@@ -121,7 +120,6 @@ set_property IOSTANDARD LVCMOS33 [get_ports {SSEG_AN[2]}]
 #Bank = 34, Pin name = ,					Sch name = AN3
 set_property PACKAGE_PIN W4 [get_ports {SSEG_AN[3]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {SSEG_AN[3]}]
-
 
 
 # Timing
