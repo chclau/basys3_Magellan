@@ -1,0 +1,11 @@
+# Create a read command for register 0 - version register
+create_hw_axi_txn read_txn0 [get_hw_axis hw_axi_1] -type read -address 00000000 
+# Create a read command for register 1 - date register
+create_hw_axi_txn read_txn1 [get_hw_axis hw_axi_1] -type read -address 00000004 
+# Create a write command for register 2
+create_hw_axi_txn write_txn2 [get_hw_axis hw_axi_1] -type write -address 00000008 -len 128 -data 1234567
+# Create a read command for register 2
+create_hw_axi_txn read_txn2 [get_hw_axis hw_axi_1] -type read -address 00000008
+
+# Command example for register 0 read. Replace the command name by the names defined above to run another command
+run_hw_axi read_txn0 
